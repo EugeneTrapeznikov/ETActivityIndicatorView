@@ -1,7 +1,7 @@
 ETActivityIndicatorView
 =======================
 
-WindowsPhone like activity indicator for ios
+WindowsPhone like activity indicator for iOS. Display it while loading or waiting something.
 
 ![example](https://lh5.googleusercontent.com/-WZDKi17rN9A/UZ9cpsbPHEI/AAAAAAAAAIE/2QS3xX2KHqA/s480/iOS%2520Simulator%2520Screen%2520shot%2520May%252024%252C%25202013%25205.58.52%2520PM.png)
 
