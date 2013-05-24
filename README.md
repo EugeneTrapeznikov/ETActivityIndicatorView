@@ -18,11 +18,11 @@ How to use
 Include the `ETActivityIndicatorView.h` and `ETActivityIndicatorView.m` files and image `circle.png` in your project.
 
 To display  `ETActivityIndicatorView`, simply do it like basic `UIActivityIndicatorView`:
-
+<code>
   ETActivityIndicatorView *etActivity = [[ETActivityIndicatorView alloc] initWithFrame:CGRectMake((10, 10, 60, 60)];
   [etActivity startAnimating];
   [self.view addSubview:etActivity];
-
+</code>
 Example project included.
 
 Support / Contact / Bugs / Features
