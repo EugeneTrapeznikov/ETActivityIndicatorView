@@ -78,7 +78,7 @@ float radius; //depends on frame.size
         circleAnimation.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.15f :0.60f :0.85f :0.4f];
         [circleAnimation setCalculationMode:kCAAnimationPaced];
         circleAnimation.path = circlePath;
-        circleAnimation.repeatCount = 400;
+        circleAnimation.repeatCount = HUGE_VALF;
         [circleImage.layer addAnimation:circleAnimation forKey:@"circleAnimation"];
         
         CGPathRelease(circlePath);
