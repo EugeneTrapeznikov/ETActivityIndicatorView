@@ -19,9 +19,9 @@ Include the `ETActivityIndicatorView.h` and `ETActivityIndicatorView.m` files an
 
 To display  `ETActivityIndicatorView`, simply do it like basic `UIActivityIndicatorView`:
 
-  ETActivityIndicatorView *etActivity = [[ETActivityIndicatorView alloc] initWithFrame:CGRectMake((10, 10, 60, 60)];
-  [etActivity startAnimating];
-  [self.view addSubview:etActivity];
+    ETActivityIndicatorView *etActivity = [[ETActivityIndicatorView alloc] initWithFrame:CGRectMake((10, 10, 60, 60)];
+    [etActivity startAnimating];
+    [self.view addSubview:etActivity];
 
 Example project included.
 
