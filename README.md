@@ -30,7 +30,7 @@ Support / Contact / Bugs / Features
 
 I can't promise to answer questions about how to use the code.
 
-If you want to submit a feature request or bug report, please use [GitHub's issue tracker for this project](https://github.com/Dejal/DejalActivityView/issues).  Or preferably fork the code and implement the feature/fix yourself, then submit a pull request.
+If you want to submit a feature request or bug report, please use [GitHub's issue tracker for this project](https://github.com/EugeneTrapeznikov/ETActivityIndicatorView/issues).  Or preferably fork the code and implement the feature/fix yourself, then submit a pull request.
 
 Enjoy!
 
