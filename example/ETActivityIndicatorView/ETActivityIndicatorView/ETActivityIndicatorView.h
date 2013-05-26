@@ -10,6 +10,8 @@
 
 @interface ETActivityIndicatorView : UIView
 
+@property (nonatomic,retain) UIColor *color;
+
 -(void)startAnimating;
 
 -(void)stopAnimating;

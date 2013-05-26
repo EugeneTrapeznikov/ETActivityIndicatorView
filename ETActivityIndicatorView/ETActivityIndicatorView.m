@@ -8,9 +8,13 @@
 
 #import "ETActivityIndicatorView.h"
 
+#import "Circle.h"
+
 #import <QuartzCore/QuartzCore.h>
 
 @implementation ETActivityIndicatorView
+
+@synthesize color;
 
 BOOL isAnimating = NO;
 
@@ -31,6 +35,11 @@ float radius; //depends on frame.size
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        
+        isAnimating = NO;
+        
+        color = [UIColor whiteColor];
+        
     }
     return self;
 }
@@ -63,10 +72,10 @@ float radius; //depends on frame.size
         
         circleNumber ++;
         
-        UIImageView *circleImage = [[UIImageView alloc] initWithFrame:CGRectMake((self.frame.size.width-circleSize)/2, self.frame.size.height-circleSize, circleSize, circleSize)];
-        circleImage.image = [UIImage imageNamed:@"circle"];
-        circleImage.contentMode = UIViewContentModeScaleAspectFit;
-        [self addSubview:circleImage];
+        Circle *circle = [[Circle alloc] initWithFrame:CGRectMake((self.frame.size.width-circleSize)/2 - 1, self.frame.size.height-circleSize -1, circleSize +2, circleSize+2)];
+        circle.color = color;
+        circle.backgroundColor = [UIColor clearColor];
+        [self addSubview:circle];
         
         CGMutablePathRef circlePath = CGPathCreateMutable();
         CGPathMoveToPoint(circlePath, NULL, self.frame.size.width/2, self.frame.size.height-circleSize/2);
@@ -79,7 +88,7 @@ float radius; //depends on frame.size
         [circleAnimation setCalculationMode:kCAAnimationPaced];
         circleAnimation.path = circlePath;
         circleAnimation.repeatCount = HUGE_VALF;
-        [circleImage.layer addAnimation:circleAnimation forKey:@"circleAnimation"];
+        [circle.layer addAnimation:circleAnimation forKey:@"circleAnimation"];
         
         CGPathRelease(circlePath);
         

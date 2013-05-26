@@ -28,10 +28,14 @@ UIActivityIndicatorView *activity;
     activity = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(self.view.frame.size.width-110, 150, 20, 20)];
     activity.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
     [activity startAnimating];
-    //[self.view addSubview:activity];
+    [self.view addSubview:activity];
     
     //ETActivityIndicatorView
-    etActivity = [[ETActivityIndicatorView alloc] initWithFrame:CGRectMake((self.view.frame.size.width-60)/2, 150, 60, 60)];
+    etActivity = [[ETActivityIndicatorView alloc] initWithFrame:CGRectMake(50, 150, 60, 60)];
+    
+    //you can set your custom color for ETActivityIndicatorView
+    //etActivity.color = [UIColor blueColor];
+    
     [etActivity startAnimating];
     [self.view addSubview:etActivity];
     
@@ -39,17 +43,16 @@ UIActivityIndicatorView *activity;
     [startButton setTitle:@"start" forState:UIControlStateNormal];
     startButton.frame = CGRectMake(50, 50, 100, 50);
     [startButton addTarget:self action:@selector(startAnimation) forControlEvents:UIControlEventTouchUpInside];
-    //[self.view addSubview:startButton];
+    [self.view addSubview:startButton];
     
     UIButton *stopButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [stopButton setTitle:@"stop" forState:UIControlStateNormal];
     stopButton.frame = CGRectMake(self.view.frame.size.width - 50 - 100, 50, 100, 50);
     [stopButton addTarget:self action:@selector(stopAnimation) forControlEvents:UIControlEventTouchUpInside];
-    //[self.view addSubview:stopButton];
+    [self.view addSubview:stopButton];
 }
 
 -(void)startAnimation{
-
     [activity startAnimating];
     [etActivity startAnimating];
 }

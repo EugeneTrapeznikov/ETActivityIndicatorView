@@ -18,8 +18,8 @@
 		527440FA174E89F1005B9D4B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 527440F9174E89F1005B9D4B /* Default-568h@2x.png */; };
 		527440FD174E89F1005B9D4B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 527440FC174E89F1005B9D4B /* ViewController.m */; };
 		5274410C174EA85E005B9D4B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5274410B174EA85E005B9D4B /* QuartzCore.framework */; };
-		52744113174F8584005B9D4B /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 52744110174F8584005B9D4B /* circle.png */; };
 		52744114174F8584005B9D4B /* ETActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52744112174F8584005B9D4B /* ETActivityIndicatorView.m */; };
+		5285CA6B17523AC3006B2DDA /* Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5285CA6A17523AC3006B2DDA /* Circle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,9 +39,10 @@
 		527440FB174E89F1005B9D4B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		527440FC174E89F1005B9D4B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5274410B174EA85E005B9D4B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		52744110174F8584005B9D4B /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 		52744111174F8584005B9D4B /* ETActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETActivityIndicatorView.h; sourceTree = "<group>"; };
 		52744112174F8584005B9D4B /* ETActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETActivityIndicatorView.m; sourceTree = "<group>"; };
+		5285CA6917523AC3006B2DDA /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
+		5285CA6A17523AC3006B2DDA /* Circle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Circle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,9 +118,10 @@
 		5274410F174F8584005B9D4B /* ETActivityIndicatorView */ = {
 			isa = PBXGroup;
 			children = (
-				52744110174F8584005B9D4B /* circle.png */,
 				52744111174F8584005B9D4B /* ETActivityIndicatorView.h */,
 				52744112174F8584005B9D4B /* ETActivityIndicatorView.m */,
+				5285CA6917523AC3006B2DDA /* Circle.h */,
+				5285CA6A17523AC3006B2DDA /* Circle.m */,
 			);
 			path = ETActivityIndicatorView;
 			sourceTree = "<group>";
@@ -179,7 +181,6 @@
 				527440F6174E89F1005B9D4B /* Default.png in Resources */,
 				527440F8174E89F1005B9D4B /* Default@2x.png in Resources */,
 				527440FA174E89F1005B9D4B /* Default-568h@2x.png in Resources */,
-				52744113174F8584005B9D4B /* circle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +195,7 @@
 				527440F4174E89F1005B9D4B /* AppDelegate.m in Sources */,
 				527440FD174E89F1005B9D4B /* ViewController.m in Sources */,
 				52744114174F8584005B9D4B /* ETActivityIndicatorView.m in Sources */,
+				5285CA6B17523AC3006B2DDA /* Circle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
