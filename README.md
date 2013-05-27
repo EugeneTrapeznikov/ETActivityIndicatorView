@@ -15,7 +15,7 @@ Requirements
 How to use
 =======================
 
-Include the `ETActivityIndicatorView.h` and `ETActivityIndicatorView.m` files and image `circle.png` in your project.
+Include the `ETActivityIndicatorView.h`, `ETActivityIndicatorView.m`, `Circle.h` and `Circle.m` in your project.
 
 To display  `ETActivityIndicatorView`, simply do it like basic `UIActivityIndicatorView`:
 
