@@ -16,32 +16,55 @@
 
 @synthesize color;
 
-BOOL isAnimating = NO;
 
-UIImageView *circleImage;
-
-NSTimer *circleDelay; // for creating different circles
-
-int circleNumber;
-
-int maxCircleNumber = 5; //maximum number of circles
-
-float circleSize; //depends on frame.size
-
-float radius; //depends on frame.size
+- (void)commonInit
+{
+    isAnimating = NO;
+    maxCircleNumber = 5;
+}
 
 - (id)initWithFrame:(CGRect)frame
 {
+    return [self initWithFrame:frame andColor:[UIColor whiteColor]];
+}
+
+- (id)initWithFrame:(CGRect)frame andColor:(UIColor*)theColor
+{
     self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-        
-        isAnimating = NO;
-        
-        color = [UIColor whiteColor];
-        
+    if (self)
+    {
+        color = theColor;
+        [self commonInit];
     }
     return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self)
+    {
+        [self commonInit];
+    }
+    return self;
+}
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    if (isAnimating){
+        //[
+    }
+}
+
+- (void)setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+    if (isAnimating)
+    {
+        [self stopAnimating];
+        [self startAnimating];
+    }
 }
 
 -(void)startAnimating{
@@ -52,7 +75,6 @@ float radius; //depends on frame.size
         
         circleNumber = 0;
         
-        //calculate radius and cicrlce size
         radius = self.frame.size.width/2;
         
         if (self.frame.size.width > self.frame.size.height){
