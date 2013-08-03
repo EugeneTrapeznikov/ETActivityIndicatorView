@@ -90,6 +90,7 @@
 }
 
 -(void)nextCircle{
+    if (!isAnimating) return;
     if (circleNumber<maxCircleNumber){
         
         circleNumber ++;
