@@ -8,14 +8,13 @@
 
 #import "ETActivityIndicatorView.h"
 
-#import "Circle.h"
-
 #import <QuartzCore/QuartzCore.h>
 
 @implementation ETActivityIndicatorView
 
 @synthesize color;
 
+#pragma mark - Life Cycle
 
 - (void)commonInit
 {
@@ -94,10 +93,14 @@
         
         circleNumber ++;
         
-        Circle *circle = [[Circle alloc] initWithFrame:CGRectMake((self.frame.size.width-circleSize)/2 - 1, self.frame.size.height-circleSize -1, circleSize +2, circleSize+2)];
-        circle.color = color;
-        circle.backgroundColor = [UIColor clearColor];
-        [self addSubview:circle];
+        CGRect f = CGRectMake((self.frame.size.width-circleSize)/2 - 1, self.frame.size.height-circleSize -1, circleSize +2, circleSize+2);
+        CAShapeLayer *circleLayer = [CAShapeLayer layer];
+        circleLayer.frame = f;
+        f.origin.x=0;
+        f.origin.y=0;
+        circleLayer.path = CGPathCreateWithEllipseInRect(f,nil);
+        circleLayer.fillColor = self.color.CGColor;
+        [self.layer addSublayer:circleLayer];
         
         CGMutablePathRef circlePath = CGPathCreateMutable();
         CGPathMoveToPoint(circlePath, NULL, self.frame.size.width/2, self.frame.size.height-circleSize/2);
@@ -110,7 +113,7 @@
         [circleAnimation setCalculationMode:kCAAnimationPaced];
         circleAnimation.path = circlePath;
         circleAnimation.repeatCount = HUGE_VALF;
-        [circle.layer addAnimation:circleAnimation forKey:@"circleAnimation"];
+        [circleLayer addAnimation:circleAnimation forKey:@"circleAnimation"];
         
         CGPathRelease(circlePath);
         

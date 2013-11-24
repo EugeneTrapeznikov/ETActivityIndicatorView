@@ -18,10 +18,9 @@
     UIColor *color;
     NSTimer *circleDelay;
 }
-
 @property (nonatomic,retain) UIColor *color;
 
--(id)initWithFrame:(CGRect)frame andColor:(UIColor*)theColor;
+- (id)initWithFrame:(CGRect)frame andColor:(UIColor*)theColor;
 
 -(void)startAnimating;
 
@@ -30,3 +29,4 @@
 -(BOOL)isAnimating;
 
 @end
+

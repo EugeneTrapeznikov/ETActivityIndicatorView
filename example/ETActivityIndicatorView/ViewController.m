@@ -25,6 +25,7 @@ UIActivityIndicatorView *activity;
     [super viewDidLoad];
 
     //standard UIActivityIndicatorView
+    
     activity = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(self.view.frame.size.width-110, 150, 20, 20)];
     activity.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
     [activity startAnimating];
